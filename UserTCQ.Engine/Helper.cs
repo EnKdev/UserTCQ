@@ -26,8 +26,8 @@ namespace UserTCQ.Engine
 
         public static float LerpRadians(float a, float b, float t)
         {
-            float difference = Math.Abs(b - a);
-            if (difference > Math.PI)
+            float difference = MathF.Abs(b - a);
+            if (difference > MathF.PI)
             {
                 if (b > a)
                 {
@@ -50,8 +50,8 @@ namespace UserTCQ.Engine
 
         public static Vector2 RotatePoint(Vector2 pivot, Vector2 point, float angle)
         {
-            float s = (float)Math.Sin(angle);
-            float c = (float)Math.Cos(angle);
+            float s = MathF.Sin(angle);
+            float c = MathF.Cos(angle);
 
             point.X -= pivot.X;
             point.Y -= pivot.Y;
